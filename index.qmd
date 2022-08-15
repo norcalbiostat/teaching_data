@@ -1,5 +1,6 @@
 ---
 title: "Teaching Data Sets"
+toc: true
 listing:
   id: math105
   contents: "MATH105/*.html"
@@ -11,8 +12,8 @@ listing:
 This my page for all my teaching data sets organized by class number. 
 
 
-## Math 105
+## Math 105: Introduction to Statistics
 ::: {#math105}
 :::
 
-## Math 130
+## Math 130: Introduction to R

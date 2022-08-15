@@ -1,12 +1,13 @@
 project:
   type: website
-
+  output-dir: docs
+  
 website:
   title: "Dr D's Teaching Data"
   navbar:
     left:
       - href: index.qmd
-        text: Home
+        text: All data
 
 format:
   html:

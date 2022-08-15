@@ -14,10 +14,3 @@ for(f in files){
   )  
 }
 
-
-
-# for (cy in c(4,6,8)) {
-#   rmarkdown::render("~/StackOverflow/10466439/67525642.Rmd", 
-#                     output_file = sprintf("cyl_%s.html", cy),
-#                     params = list(cyl = cy))
-# }

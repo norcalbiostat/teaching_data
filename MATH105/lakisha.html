@@ -11,7 +11,7 @@
 
 
 
-<title>Codebook for airline_delay</title>
+<title>Codebook for lakisha</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -599,15 +599,15 @@ pre code {
 
 
 
-<h1 class="title toc-ignore">Codebook for airline_delay</h1>
+<h1 class="title toc-ignore">Codebook for lakisha</h1>
 
 </div>
 
 
-<div id="learn-more-about-where-this-data-came-from-and-what-the-variables-mean-at-httpswww.openintro.orgdataindex.phpdataairline_delay." class="section level3">
+<div id="learn-more-about-where-this-data-came-from-and-what-the-variables-mean-at-httpswww.openintro.orgdataindex.phpdatalakisha." class="section level3">
 <h3>Learn more about where this data came from and what the variables
-mean at <a href="https://www.openintro.org/data/index.php?data=airline_delay" class="uri">https://www.openintro.org/data/index.php?data=airline_delay</a>.</h3>
-<a href="airline_delay.csv">
+mean at <a href="https://www.openintro.org/data/index.php?data=lakisha" class="uri">https://www.openintro.org/data/index.php?data=lakisha</a>.</h3>
+<a href="lakisha.csv">
 <button class="btn btn-primary"><i class="fa fa-save"></i> Download file</button>
 </a>
 <p><a href="https://norcalbiostat.github.io/teaching_data/">
@@ -636,10 +636,12 @@ Plausible Values
 <tbody>
 <tr>
 <td style="text-align:left;font-weight: bold;border-right:1px solid;">
-year
+education
 </td>
 <td style="text-align:left;width: 30em; ">
-Year data collected
+Highest education, with levels of 0 = not reported; 1 = high school
+diploma; 2 = high school graduate; 3 = some college; 4 = college or
+more.
 </td>
 <td style="text-align:right;">
 0
@@ -648,15 +650,15 @@ Year data collected
 Numeric variable
 </td>
 <td style="text-align:left;width: 30em; ">
-[2019, 2020]
+[0, 4]
 </td>
 </tr>
 <tr>
 <td style="text-align:left;font-weight: bold;border-right:1px solid;">
-month
+n_jobs
 </td>
 <td style="text-align:left;width: 30em; ">
-Numeric representation of the month
+Number of jobs listed on resume.
 </td>
 <td style="text-align:right;">
 0
@@ -665,15 +667,207 @@ Numeric representation of the month
 Numeric variable
 </td>
 <td style="text-align:left;width: 30em; ">
-[12, 12]
+[1, 7]
 </td>
 </tr>
 <tr>
 <td style="text-align:left;font-weight: bold;border-right:1px solid;">
-carrier
+years_exp
 </td>
 <td style="text-align:left;width: 30em; ">
-Carrier.
+Number of years of work experience on the resume.
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[1, 44]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+honors
+</td>
+<td style="text-align:left;width: 30em; ">
+Indicator variable for which 1 = resume mentions some honors.
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[0, 1]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+volunteer
+</td>
+<td style="text-align:left;width: 30em; ">
+Indicator variable for which 1 = resume mentions some volunteering
+experience.
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[0, 1]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+military
+</td>
+<td style="text-align:left;width: 30em; ">
+Indicator variable for which 1 = resume mentions some military
+experience.
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[0, 1]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+emp_holes
+</td>
+<td style="text-align:left;width: 30em; ">
+Indicator variable for which 1 = resume mentions some employment holes.
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[0, 1]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+occup_specific
+</td>
+<td style="text-align:left;width: 30em; ">
+1990 Census Occupation Code. See sources for a key.
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[7, 903]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+occup_broad
+</td>
+<td style="text-align:left;width: 30em; ">
+Occupation broad with levels 1 = executives and managerial occupations,
+2 = administrative supervisors, 3 = sales representatives, 4 = sales
+workers, 5 = secretaries and legal assistants, 6 = clerical occupations
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[1, 6]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+work_in_school
+</td>
+<td style="text-align:left;width: 30em; ">
+Indicator variable for which 1 = resume mentions some work experience
+while at school
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[0, 1]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+email
+</td>
+<td style="text-align:left;width: 30em; ">
+Indicator variable for which 1 = email address on applicant’s resume.
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[0, 1]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+computer_skills
+</td>
+<td style="text-align:left;width: 30em; ">
+Indicator variable for which 1 = resume mentions some computer skills.
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[0, 1]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+special_skills
+</td>
+<td style="text-align:left;width: 30em; ">
+Indicator variable for which 1 = resume mentions some special skills.
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[0, 1]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+first_name
+</td>
+<td style="text-align:left;width: 30em; ">
+Applicant’s first name.
 </td>
 <td style="text-align:right;">
 0
@@ -682,15 +876,19 @@ Carrier.
 Categorical
 </td>
 <td style="text-align:left;width: 30em; ">
-9E, AA, AS, B6, DL, EV, F9, G4, HA, MQ, NK, OH, OO, UA, WN, YV, YX
+Aisha, Allison, Anne, Brad, Brendan, Brett, Carrie, Darnell, Ebony,
+Emily, Geoffrey, Greg, Hakim, Jamal, Jay, Jermaine, Jill, Kareem,
+Keisha, Kenya, Kristen, Lakisha, Latonya, Latoya, Laurie, Leroy,
+Matthew, Meredith, Neil, Rasheed, Sarah, Tamika, Tanisha, Todd,
+Tremayne, Tyrone
 </td>
 </tr>
 <tr>
 <td style="text-align:left;font-weight: bold;border-right:1px solid;">
-carrier_name
+sex
 </td>
 <td style="text-align:left;width: 30em; ">
-Carrier Name.
+Sex, with levels of ‘f’ = female; ‘m’ = male.
 </td>
 <td style="text-align:right;">
 0
@@ -699,19 +897,15 @@ Carrier Name.
 Categorical
 </td>
 <td style="text-align:left;width: 30em; ">
-Alaska Airlines Inc., Allegiant Air, American Airlines Inc., Delta Air
-Lines Inc., Endeavor Air Inc., Envoy Air, ExpressJet Airlines LLC,
-Frontier Airlines Inc., Hawaiian Airlines Inc., JetBlue Airways, Mesa
-Airlines Inc., PSA Airlines Inc., Republic Airline, SkyWest Airlines
-Inc., Southwest Airlines Co., Spirit Air Lines, United Air Lines Inc. 
+f, m
 </td>
 </tr>
 <tr>
 <td style="text-align:left;font-weight: bold;border-right:1px solid;">
-airport
+race
 </td>
 <td style="text-align:left;width: 30em; ">
-Airport code.
+Race, with levels of ‘b’ = black; ‘w’ = white.
 </td>
 <td style="text-align:right;">
 0
@@ -720,40 +914,66 @@ Airport code.
 Categorical
 </td>
 <td style="text-align:left;width: 30em; ">
-ABE, ABI, ABQ, ABR, ABY, ACK, ACT, ACV, ACY, ADK, ADQ, AEX, AGS, ALB,
-ALO, ALS, AMA, ANC, APN, ASE, ATL, ATW, ATY, AUS, AVL, AVP, AZA, AZO,
-BDL, BET, BFF, BFL, BFM, BGM, BGR, BHM, BIL, BIS, BJI, BLI, BLV, BMI,
-BNA, BOI, BOS, BPT, BQK, BQN, BRD, BRO, BRW, BTM, BTR, BTV, BUF, BUR,
-BWI, BZN, CAE, CAK, CDB, CDC, CDV, CGI, CHA, CHO, CHS, CID, CIU, CKB,
-CLE, CLL, CLT, CMH, CMI, CMX, CNY, COD, COS, COU, CPR, CRP, CRW, CSG,
-CVG, CWA, CYS, DAB, DAL, DAY, DBQ, DCA, DDC, DEC, DEN, DFW, DHN, DIK,
-DLH, DRO, DRT, DSM, DTW, DVL, EAR, EAU, ECP, EGE, EKO, ELM, ELP, ERI,
-ESC, EUG, EVV, EWN, EWR, EYW, FAI, FAR, FAT, FAY, FCA, FLG, FLL, FNT,
-FSD, FSM, FWA, GCC, GCK, GEG, GFK, GGG, GJT, GNV, GPT, GRB, GRI, GRK,
-GRR, GSO, GSP, GTF, GTR, GUC, GUM, HDN, HGR, HHH, HIB, HLN, HNL, HOB,
-HOU, HPN, HRL, HSV, HTS, HVN, HYS, IAD, IAG, IAH, ICT, IDA, ILM, IMT,
-IND, INL, ISP, ITH, ITO, JAC, JAN, JAX, JFK, JLN, JMS, JNU, JST, KOA,
-KTN, LAN, LAR, LAS, LAW, LAX, LBB, LBE, LBF, LBL, LCH, LCK, LEX, LFT,
-LGA, LGB, LIH, LIT, LNK, LRD, LSE, LWB, LWS, LYH, MAF, MBS, MCI, MCO,
-MDT, MDW, MEI, MEM, MFE, MFR, MGM, MHK, MHT, MIA, MKE, MKG, MLB, MLI,
-MLU, MMH, MOB, MOT, MQT, MRY, MSN, MSO, MSP, MSY, MTJ, MYR, OAJ, OAK,
-OGD, OGG, OGS, OKC, OMA, OME, ONT, ORD, ORF, ORH, OTH, OTZ, OWB, PAE,
-PAH, PBG, PBI, PDX, PGD, PGV, PHF, PHL, PHX, PIA, PIB, PIE, PIH, PIR,
-PIT, PLN, PNS, PPG, PRC, PSC, PSE, PSG, PSM, PSP, PUB, PVD, PVU, PWM,
-RAP, RDD, RDM, RDU, RFD, RHI, RIC, RIW, RKS, RNO, ROA, ROC, ROW, RST,
-RSW, SAF, SAN, SAT, SAV, SBA, SBN, SBP, SCC, SCE, SCK, SDF, SEA, SFB,
-SFO, SGF, SGU, SHD, SHR, SHV, SIT, SJC, SJT, SJU, SLC, SLN, SMF, SMX,
-SNA, SPI, SPN, SPS, SRQ, STC, STL, STS, STT, STX, SUN, SUX, SWF, SWO,
-SYR, TLH, TOL, TPA, TRI, TTN, TUL, TUS, TVC, TWF, TXK, TYR, TYS, UIN,
-USA, VCT, VEL, VLD, VPS, WRG, XNA, XWA, YAK, YUM
+b, w
 </td>
 </tr>
 <tr>
 <td style="text-align:left;font-weight: bold;border-right:1px solid;">
-airport_name
+h
 </td>
 <td style="text-align:left;width: 30em; ">
-Name of airport.
+Indicator variable for which 1 = high quality resume.
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[0, 1]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+l
+</td>
+<td style="text-align:left;width: 30em; ">
+Indicator variable for which 1 = low quality resume.
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[0, 1]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+call
+</td>
+<td style="text-align:left;width: 30em; ">
+Indicator variable for which 1 = applicant was called back.
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[0, 1]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+city
+</td>
+<td style="text-align:left;width: 30em; ">
+City, with levels of ‘c’ = chicago; ‘b’ = boston.
 </td>
 <td style="text-align:right;">
 0
@@ -762,234 +982,32 @@ Name of airport.
 Categorical
 </td>
 <td style="text-align:left;width: 30em; ">
-Aberdeen, SD: Aberdeen Regional, Abilene, TX: Abilene Regional, Adak
-Island, AK: Adak, Aguadilla, PR: Rafael Hernandez, Akron, OH:
-Akron-Canton Regional, Alamosa, CO: San Luis Valley Regional/Bergman
-Field, Albany, GA: Southwest Georgia Regional, Albany, NY: Albany
-International, Albuquerque, NM: Albuquerque International Sunport,
-Alexandria, LA: Alexandria International, Allentown/Bethlehem/Easton,
-PA: Lehigh Valley International, Alpena, MI: Alpena County Regional,
-Amarillo, TX: Rick Husband Amarillo International, Anchorage, AK: Ted
-Stevens Anchorage International, Appleton, WI: Appleton International,
-Arcata/Eureka, CA: California Redwood Coast Humboldt County, Asheville,
-NC: Asheville Regional, Ashland, WV: Tri-State/Milton J. Ferguson Field,
-Aspen, CO: Aspen Pitkin County Sardy Field, Atlanta, GA:
-Hartsfield-Jackson Atlanta International, Atlantic City, NJ: Atlantic
-City International, Augusta, GA: Augusta Regional at Bush Field, Austin,
-TX: Austin - Bergstrom International, Bakersfield, CA: Meadows Field,
-Baltimore, MD: Baltimore/Washington International Thurgood Marshall,
-Bangor, ME: Bangor International, Barrow, AK: Wiley Post/Will Rogers
-Memorial, Baton Rouge, LA: Baton Rouge Metropolitan/Ryan Field,
-Beaumont/Port Arthur, TX: Jack Brooks Regional, Belleville, IL: Scott
-AFB/MidAmerica, Bellingham, WA: Bellingham International, Bemidji, MN:
-Bemidji Regional, Bend/Redmond, OR: Roberts Field, Bethel, AK: Bethel
-Airport, Billings, MT: Billings Logan International, Binghamton, NY:
-Greater Binghamton/Edwin A. Link Field, Birmingham, AL:
-Birmingham-Shuttlesworth International, Bismarck/Mandan, ND: Bismarck
-Municipal, Bloomington/Normal, IL: Central Il Regional Airport at
-Bloomington, Boise, ID: Boise Air Terminal, Boston, MA: Logan
-International, Bozeman, MT: Bozeman Yellowstone International, Brainerd,
-MN: Brainerd Lakes Regional, Bristol/Johnson City/Kingsport, TN: Tri
-Cities, Brownsville, TX: Brownsville South Padre Island International,
-Brunswick, GA: Brunswick Golden Isles, Buffalo, NY: Buffalo Niagara
-International, Burbank, CA: Bob Hope, Burlington, VT: Burlington
-International, Butte, MT: Bert Mooney, Cape Girardeau, MO: Cape
-Girardeau Regional, Casper, WY: Casper/Natrona County International,
-Cedar City, UT: Cedar City Regional, Cedar Rapids/Iowa City, IA: The
-Eastern Iowa, Champaign/Urbana, IL: University of Illinois/Willard,
-Charleston, SC: Charleston AFB/International, Charleston/Dunbar, WV:
-Yeager, Charlotte Amalie, VI: Cyril E King, Charlotte, NC: Charlotte
-Douglas International, Charlottesville, VA: Charlottesville Albemarle,
-Chattanooga, TN: Lovell Field, Cheyenne, WY: Cheyenne Regional/Jerry
-Olson Field, Chicago, IL: Chicago Midway International, Chicago, IL:
-Chicago O’Hare International, Christiansted, VI: Henry E. Rohlsen,
-Cincinnati, OH: Cincinnati/Northern Kentucky International,
-Clarksburg/Fairmont, WV: North Central West Virginia, Cleveland, OH:
-Cleveland-Hopkins International, Cody, WY: Yellowstone Regional, Cold
-Bay, AK: Cold Bay Airport, College Station/Bryan, TX: Easterwood Field,
-Colorado Springs, CO: City of Colorado Springs Municipal, Columbia, MO:
-Columbia Regional, Columbia, SC: Columbia Metropolitan, Columbus, GA:
-Columbus Airport, Columbus, MS: Golden Triangle Regional, Columbus, OH:
-John Glenn Columbus International, Columbus, OH: Rickenbacker
-International, Concord, NC: Concord Padgett Regional, Cordova, AK: Merle
-K Mudhole Smith, Corpus Christi, TX: Corpus Christi International,
-Dallas, TX: Dallas Love Field, Dallas/Fort Worth, TX: Dallas/Fort Worth
-International, Dayton, OH: James M Cox/Dayton International, Daytona
-Beach, FL: Daytona Beach International, Deadhorse, AK: Deadhorse
-Airport, Decatur, IL: Decatur Airport, Del Rio, TX: Del Rio
-International, Denver, CO: Denver International, Des Moines, IA: Des
-Moines International, Detroit, MI: Detroit Metro Wayne County, Devils
-Lake, ND: Devils Lake Regional, Dickinson, ND: Dickinson - Theodore
-Roosevelt Regional, Dodge City, KS: Dodge City Regional, Dothan, AL:
-Dothan Regional, Dubuque, IA: Dubuque Regional, Duluth, MN: Duluth
-International, Durango, CO: Durango La Plata County, Eagle, CO: Eagle
-County Regional, Eau Claire, WI: Chippewa Valley Regional, El Paso, TX:
-El Paso International, Elko, NV: Elko Regional, Elmira/Corning, NY:
-Elmira/Corning Regional, Erie, PA: Erie International/Tom Ridge Field,
-Escanaba, MI: Delta County, Eugene, OR: Mahlon Sweet Field, Evansville,
-IN: Evansville Regional, Everett, WA: Snohomish County, Fairbanks, AK:
-Fairbanks International, Fargo, ND: Hector International, Fayetteville,
-AR: Northwest Arkansas Regional, Fayetteville, NC: Fayetteville
-Regional/Grannis Field, Flagstaff, AZ: Flagstaff Pulliam, Flint, MI:
-Bishop International, Fort Lauderdale, FL: Fort Lauderdale-Hollywood
-International, Fort Myers, FL: Southwest Florida International, Fort
-Smith, AR: Fort Smith Regional, Fort Wayne, IN: Fort Wayne
-International, Fresno, CA: Fresno Yosemite International, Gainesville,
-FL: Gainesville Regional, Garden City, KS: Garden City Regional,
-Gillette, WY: Gillette Campbell County, Grand Forks, ND: Grand Forks
-International, Grand Island, NE: Central Nebraska Regional, Grand
-Junction, CO: Grand Junction Regional, Grand Rapids, MI: Gerald R. Ford
-International, Great Falls, MT: Great Falls International, Green Bay,
-WI: Green Bay Austin Straubel International, Greensboro/High Point, NC:
-Piedmont Triad International, Greenville, NC: Pitt Greenville, Greer,
-SC: Greenville-Spartanburg International, Guam, TT: Guam International,
-Gulfport/Biloxi, MS: Gulfport-Biloxi International, Gunnison, CO:
-Gunnison-Crested Butte Regional, Hagerstown, MD: Hagerstown
-Regional-Richard A. Henson Field, Hancock/Houghton, MI: Houghton County
-Memorial, Harlingen/San Benito, TX: Valley International, Harrisburg,
-PA: Harrisburg International, Hartford, CT: Bradley International,
-Hattiesburg/Laurel, MS: Hattiesburg-Laurel Regional, Hayden, CO: Yampa
-Valley, Hays, KS: Hays Regional, Helena, MT: Helena Regional, Hibbing,
-MN: Range Regional, Hilo, HI: Hilo International, Hilton Head, SC:
-Hilton Head Airport, Hobbs, NM: Lea County Regional, Honolulu, HI:
-Daniel K Inouye International, Houston, TX: George Bush
-Intercontinental/Houston, Houston, TX: William P Hobby, Huntsville, AL:
-Huntsville International-Carl T Jones Field, Idaho Falls, ID: Idaho
-Falls Regional, Indianapolis, IN: Indianapolis International,
-International Falls, MN: Falls International Einarson Field, Iron
-Mountain/Kingsfd, MI: Ford, Islip, NY: Long Island MacArthur,
-Ithaca/Cortland, NY: Ithaca Tompkins Regional, Jackson, WY: Jackson
-Hole, Jackson/Vicksburg, MS: Jackson Medgar Wiley Evers International,
-Jacksonville, FL: Jacksonville International, Jacksonville/Camp Lejeune,
-NC: Albert J Ellis, Jamestown, ND: Jamestown Regional, Johnstown, PA:
-John Murtha Johnstown-Cambria County, Joplin, MO: Joplin Regional,
-Juneau, AK: Juneau International, Kahului, HI: Kahului Airport,
-Kalamazoo, MI: Kalamazoo/Battle Creek International, Kalispell, MT:
-Glacier Park International, Kansas City, MO: Kansas City International,
-Kearney, NE: Kearney Regional, Ketchikan, AK: Ketchikan International,
-Key West, FL: Key West International, Killeen, TX: Robert Gray AAF,
-Knoxville, TN: McGhee Tyson, Kodiak, AK: Kodiak Airport, Kona, HI:
-Ellison Onizuka Kona International at Keahole, Kotzebue, AK: Ralph Wien
-Memorial, La Crosse, WI: La Crosse Regional, Lafayette, LA: Lafayette
-Regional Paul Fournet Field, Lake Charles, LA: Lake Charles Regional,
-Lansing, MI: Capital Region International, Laramie, WY: Laramie
-Regional, Laredo, TX: Laredo International, Las Vegas, NV: McCarran
-International, Latrobe, PA: Arnold Palmer Regional, Lawton/Fort Sill,
-OK: Lawton-Fort Sill Regional, Lewisburg, WV: Greenbrier Valley,
-Lewiston, ID: Lewiston Nez Perce County, Lexington, KY: Blue Grass,
-Liberal, KS: Liberal Mid-America Regional, Lihue, HI: Lihue Airport,
-Lincoln, NE: Lincoln Airport, Little Rock, AR: Bill and Hillary Clinton
-Nat Adams Field, Long Beach, CA: Long Beach Airport, Longview, TX: East
-Texas Regional, Los Angeles, CA: Los Angeles International, Louisville,
-KY: Louisville Muhammad Ali International, Lubbock, TX: Lubbock Preston
-Smith International, Lynchburg, VA: Lynchburg Regional/Preston Glenn
-Field, Madison, WI: Dane County Regional-Truax Field, Mammoth Lakes, CA:
-Mammoth Lakes Airport, Manchester, NH: Manchester-Boston Regional,
-Manhattan/Ft. Riley, KS: Manhattan Regional, Marquette, MI: Sawyer
-International, Medford, OR: Rogue Valley International - Medford,
-Melbourne, FL: Melbourne International, Memphis, TN: Memphis
-International, Meridian, MS: Key Field, Miami, FL: Miami International,
-Midland/Odessa, TX: Midland International Air and Space Port, Milwaukee,
-WI: General Mitchell International, Minneapolis, MN: Minneapolis-St Paul
-International, Minot, ND: Minot International, Mission/McAllen/Edinburg,
-TX: McAllen Miller International, Missoula, MT: Missoula International,
-Moab, UT: Canyonlands Field, Mobile, AL: Mobile Downtown, Mobile, AL:
-Mobile Regional, Moline, IL: Quad City International, Monroe, LA: Monroe
-Regional, Monterey, CA: Monterey Regional, Montgomery, AL: Montgomery
-Regional, Montrose/Delta, CO: Montrose Regional, Mosinee, WI: Central
-Wisconsin, Muskegon, MI: Muskegon County, Myrtle Beach, SC: Myrtle Beach
-International, Nantucket, MA: Nantucket Memorial, Nashville, TN:
-Nashville International, New Bern/Morehead/Beaufort, NC: Coastal
-Carolina Regional, New Haven, CT: Tweed New Haven, New Orleans, LA:
-Louis Armstrong New Orleans International, New York, NY: John F. Kennedy
-International, New York, NY: LaGuardia, Newark, NJ: Newark Liberty
-International, Newburgh/Poughkeepsie, NY: New York Stewart
-International, Newport News/Williamsburg, VA: Newport News/Williamsburg
-International, Niagara Falls, NY: Niagara Falls International, Nome, AK:
-Nome Airport, Norfolk, VA: Norfolk International, North Bend/Coos Bay,
-OR: Southwest Oregon Regional, North Platte, NE: North Platte Regional
-Airport Lee Bird Field, Oakland, CA: Metropolitan Oakland International,
-Ogden, UT: Ogden-Hinckley, Ogdensburg, NY: Ogdensburg International,
-Oklahoma City, OK: Will Rogers World, Omaha, NE: Eppley Airfield,
-Ontario, CA: Ontario International, Orlando, FL: Orlando International,
-Owensboro, KY: Owensboro Daviess County Regional, Paducah, KY: Barkley
-Regional, Pago Pago, TT: Pago Pago International, Palm Springs, CA: Palm
-Springs International, Panama City, FL: Northwest Florida Beaches
-International, Pasco/Kennewick/Richland, WA: Tri Cities, Pellston, MI:
-Pellston Regional Airport of Emmet County, Pensacola, FL: Pensacola
-International, Peoria, IL: General Downing - Peoria International,
-Petersburg, AK: Petersburg James A Johnson, Philadelphia, PA:
-Philadelphia International, Phoenix, AZ: Phoenix - Mesa Gateway,
-Phoenix, AZ: Phoenix Sky Harbor International, Pierre, SD: Pierre
-Regional, Pittsburgh, PA: Pittsburgh International, Plattsburgh, NY:
-Plattsburgh International, Pocatello, ID: Pocatello Regional, Ponce, PR:
-Mercedita, Portland, ME: Portland International Jetport, Portland, OR:
-Portland International, Portsmouth, NH: Portsmouth International at
-Pease, Prescott, AZ: Prescott Regional Ernest A Love Field, Providence,
-RI: Theodore Francis Green State, Provo, UT: Provo Municipal, Pueblo,
-CO: Pueblo Memorial, Punta Gorda, FL: Punta Gorda Airport, Quincy, IL:
-Quincy Regional-Baldwin Field, Raleigh/Durham, NC: Raleigh-Durham
-International, Rapid City, SD: Rapid City Regional, Redding, CA: Redding
-Municipal, Reno, NV: Reno/Tahoe International, Rhinelander, WI:
-Rhinelander/Oneida County, Richmond, VA: Richmond International,
-Riverton/Lander, WY: Riverton Regional, Roanoke, VA: Roanoke Blacksburg
-Regional Woodrum Field, Rochester, MN: Rochester International,
-Rochester, NY: Greater Rochester International, Rock Springs, WY:
-Southwest Wyoming Regional, Rockford, IL: Chicago/Rockford
-International, Roswell, NM: Roswell International Air Center,
-Sacramento, CA: Sacramento International, Saginaw/Bay City/Midland, MI:
-MBS International, Saipan, TT: Francisco C. Ada Saipan International,
-Salina, KS: Salina Regional, Salt Lake City, UT: Salt Lake City
-International, San Angelo, TX: San Angelo Regional/Mathis Field, San
-Antonio, TX: San Antonio International, San Diego, CA: San Diego
-International, San Francisco, CA: San Francisco International, San Jose,
-CA: Norman Y. Mineta San Jose International, San Juan, PR: Luis Munoz
-Marin International, San Luis Obispo, CA: San Luis County Regional,
-Sanford, FL: Orlando Sanford International, Santa Ana, CA: John Wayne
-Airport-Orange County, Santa Barbara, CA: Santa Barbara Municipal, Santa
-Fe, NM: Santa Fe Municipal, Santa Maria, CA: Santa Maria Public/Capt. G.
-Allan Hancock Field, Santa Rosa, CA: Charles M. Schulz - Sonoma County,
-Sarasota/Bradenton, FL: Sarasota/Bradenton International, Sault Ste.
-Marie, MI: Chippewa County International, Savannah, GA: Savannah/Hilton
-Head International, Scottsbluff, NE: Western Neb. Regional/William B.
-Heilig Field, Scranton/Wilkes-Barre, PA: Wilkes Barre Scranton
-International, Seattle, WA: Seattle/Tacoma International, Sheridan, WY:
-Sheridan County, Shreveport, LA: Shreveport Regional, Sioux City, IA:
-Sioux Gateway Brig Gen Bud Day Field, Sioux Falls, SD: Joe Foss Field,
-Sitka, AK: Sitka Rocky Gutierrez, South Bend, IN: South Bend
-International, Spokane, WA: Spokane International, Springfield, IL:
-Abraham Lincoln Capital, Springfield, MO: Springfield-Branson National,
-St. Cloud, MN: St. Cloud Regional, St. George, UT: St George Regional,
-St. Louis, MO: St Louis Lambert International, St. Petersburg, FL: St
-Pete Clearwater International, State College, PA: University Park,
-Staunton, VA: Shenandoah Valley Regional, Stillwater, OK: Stillwater
-Regional, Stockton, CA: Stockton Metropolitan, Sun
-Valley/Hailey/Ketchum, ID: Friedman Memorial, Syracuse, NY: Syracuse
-Hancock International, Tallahassee, FL: Tallahassee International,
-Tampa, FL: Tampa International, Texarkana, AR: Texarkana Regional-Webb
-Field, Toledo, OH: Toledo Express, Traverse City, MI: Cherry Capital,
-Trenton, NJ: Trenton Mercer, Tucson, AZ: Tucson International, Tulsa,
-OK: Tulsa International, Twin Falls, ID: Joslin Field - Magic Valley
-Regional, Tyler, TX: Tyler Pounds Regional, Valdosta, GA: Valdosta
-Regional, Valparaiso, FL: Eglin AFB Destin Fort Walton Beach, Vernal,
-UT: Vernal Regional, Victoria, TX: Victoria Regional, Waco, TX: Waco
-Regional, Washington, DC: Ronald Reagan Washington National, Washington,
-DC: Washington Dulles International, Waterloo, IA: Waterloo Regional,
-Watertown, SD: Watertown Regional, West Palm Beach/Palm Beach, FL: Palm
-Beach International, White Plains, NY: Westchester County, Wichita
-Falls, TX: Sheppard AFB/Wichita Falls Municipal, Wichita, KS: Wichita
-Dwight D Eisenhower National, Williston, ND: Williston Basin
-International, Wilmington, NC: Wilmington International, Worcester, MA:
-Worcester Regional, Wrangell, AK: Wrangell Airport, Yakutat, AK: Yakutat
-Airport, Yuma, AZ: Yuma MCAS/Yuma International
+b, c
 </td>
 </tr>
 <tr>
 <td style="text-align:left;font-weight: bold;border-right:1px solid;">
-arr_flights
+kind
 </td>
 <td style="text-align:left;width: 30em; ">
-Number of flights arriving at airport
+Kind, with levels of ‘a’ = administrative; ‘s’ = sales.
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+Categorical
+</td>
+<td style="text-align:left;width: 30em; ">
+a, s
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+ad_id
+</td>
+<td style="text-align:left;width: 30em; ">
+Employment ad identifier.
 </td>
 <td style="text-align:right;">
 0
@@ -998,15 +1016,117 @@ Number of flights arriving at airport
 Numeric variable
 </td>
 <td style="text-align:left;width: 30em; ">
-[1, 19713]
+[1, 1344]
 </td>
 </tr>
 <tr>
 <td style="text-align:left;font-weight: bold;border-right:1px solid;">
-arr_del15
+frac_black
 </td>
 <td style="text-align:left;width: 30em; ">
-Number of flights more than 15 minutes late
+Fraction of blacks in applicant’s zip.
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[0, 0.992042720317841]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+frac_white
+</td>
+<td style="text-align:left;width: 30em; ">
+Fraction of whites in applicant’s zip.
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[0.00481428811326623, 0.981652796268463]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+l_med_hh_inc
+</td>
+<td style="text-align:left;width: 30em; ">
+Log median household income in applicant’s zip.
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[8.84173774719238, 11.1192903518677]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+frac_dropout
+</td>
+<td style="text-align:left;width: 30em; ">
+Fraction of high-school dropouts in applicant’s zip.
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[0, 0.356164395809174]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+frac_colp
+</td>
+<td style="text-align:left;width: 30em; ">
+Fraction of college degree or more in applicant’s zip
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[0.0308468621224165, 0.780124247074127]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+l_inc
+</td>
+<td style="text-align:left;width: 30em; ">
+Log per capita income in applicant’s zip.
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[8.50734519958496, 11.0786600112915]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+col
+</td>
+<td style="text-align:left;width: 30em; ">
+Indicator variable for which 1 = applicant has college degree or more.
 </td>
 <td style="text-align:right;">
 0
@@ -1015,15 +1135,50 @@ Number of flights more than 15 minutes late
 Numeric variable
 </td>
 <td style="text-align:left;width: 30em; ">
-[0, 2289]
+[0, 1]
 </td>
 </tr>
 <tr>
 <td style="text-align:left;font-weight: bold;border-right:1px solid;">
-carrier_ct
+expminreq
 </td>
 <td style="text-align:left;width: 30em; ">
-Number of flights delayed due to air carrier. (e.g. no crew)
+Minimum experience required, if any (in years when numeric).
+</td>
+<td style="text-align:right;">
+56
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+school_req
+</td>
+<td style="text-align:left;width: 30em; ">
+Specific education requirement, if any. ‘hsg’ = high school graduate,
+‘somcol’ = some college, ‘colp’ = four year degree or higher
+</td>
+<td style="text-align:right;">
+89
+</td>
+<td style="text-align:left;">
+Categorical
+</td>
+<td style="text-align:left;width: 30em; ">
+colp, hsg, somcol
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+eoe
+</td>
+<td style="text-align:left;width: 30em; ">
+Indicator variable for which 1 = ad mentions employer is ‘Equal
+Opportunity Employer’.
 </td>
 <td style="text-align:right;">
 0
@@ -1032,15 +1187,202 @@ Number of flights delayed due to air carrier. (e.g. no crew)
 Numeric variable
 </td>
 <td style="text-align:left;width: 30em; ">
-[0, 697]
+[0, 1]
 </td>
 </tr>
 <tr>
 <td style="text-align:left;font-weight: bold;border-right:1px solid;">
-weather_ct
+parent_sales
 </td>
 <td style="text-align:left;width: 30em; ">
-Number of flights due to weather.
+Sales of parent company (in millions of US $).
+</td>
+<td style="text-align:right;">
+66
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[0, 47947.6015625]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+parent_emp
+</td>
+<td style="text-align:left;width: 30em; ">
+Number of parent company employees.
+</td>
+<td style="text-align:right;">
+65
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[0, 124500]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+branch_sales
+</td>
+<td style="text-align:left;width: 30em; ">
+Sales of branch (in millions of US $).
+</td>
+<td style="text-align:right;">
+88
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[0, 10500]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+branch_emp
+</td>
+<td style="text-align:left;width: 30em; ">
+Number of branch employees.
+</td>
+<td style="text-align:right;">
+86
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[0, 12208]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+fed
+</td>
+<td style="text-align:left;width: 30em; ">
+Indicator variable for which 1 = employer is a federal contractor.
+</td>
+<td style="text-align:right;">
+36
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[0, 1]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+frac_black_emp_zip
+</td>
+<td style="text-align:left;width: 30em; ">
+Fraction of blacks in employers’s zipcode.
+</td>
+<td style="text-align:right;">
+61
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[0, 0.989359557628632]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+frac_white_emp_zip
+</td>
+<td style="text-align:left;width: 30em; ">
+Fraction of whites in employer’s zipcode.
+</td>
+<td style="text-align:right;">
+61
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[0.00550022022798657, 1]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+l_med_hh_inc_emp_zip
+</td>
+<td style="text-align:left;width: 30em; ">
+Log median household income in employer’s zipcode.
+</td>
+<td style="text-align:right;">
+61
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[9.1702470779419, 11.8143110275269]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+frac_dropout_emp_zip
+</td>
+<td style="text-align:left;width: 30em; ">
+Fraction of high-school dropouts in employer’s zipcode.
+</td>
+<td style="text-align:right;">
+61
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[0, 0.356164395809174]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+frac_colp_emp_zip
+</td>
+<td style="text-align:left;width: 30em; ">
+Fraction of college degree or more in employer’s zipcode.
+</td>
+<td style="text-align:right;">
+61
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[0.0308468621224165, 0.892857134342194]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+l_inc_emp_zip
+</td>
+<td style="text-align:left;width: 30em; ">
+Log per capita income in employer’s zipcode.
+</td>
+<td style="text-align:right;">
+61
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[8.66250514984131, 11.3624401092529]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+manager
+</td>
+<td style="text-align:left;width: 30em; ">
+Indicator variable for which 1 = executives or managers wanted.
 </td>
 <td style="text-align:right;">
 0
@@ -1049,16 +1391,15 @@ Number of flights due to weather.
 Numeric variable
 </td>
 <td style="text-align:left;width: 30em; ">
-[0, 89.42]
+[0, 1]
 </td>
 </tr>
 <tr>
 <td style="text-align:left;font-weight: bold;border-right:1px solid;">
-nas_ct
+supervisor
 </td>
 <td style="text-align:left;width: 30em; ">
-Number of flights delayed due to National Aviation System (e.g. heavy
-air traffic).
+Indicator variable for which 1 = administrative supervisors wanted.
 </td>
 <td style="text-align:right;">
 0
@@ -1067,15 +1408,15 @@ air traffic).
 Numeric variable
 </td>
 <td style="text-align:left;width: 30em; ">
-[0, 1039.54]
+[0, 1]
 </td>
 </tr>
 <tr>
 <td style="text-align:left;font-weight: bold;border-right:1px solid;">
-security_ct
+secretary
 </td>
 <td style="text-align:left;width: 30em; ">
-Number of flights canceled due to a security breach.
+Indicator variable for which 1 = secretaries or legal assistants wanted.
 </td>
 <td style="text-align:right;">
 0
@@ -1084,16 +1425,15 @@ Number of flights canceled due to a security breach.
 Numeric variable
 </td>
 <td style="text-align:left;width: 30em; ">
-[0, 17.31]
+[0, 1]
 </td>
 </tr>
 <tr>
 <td style="text-align:left;font-weight: bold;border-right:1px solid;">
-late_aircraft_ct
+off_support
 </td>
 <td style="text-align:left;width: 30em; ">
-Number of flights delayed as a result of another flight on the same
-aircraft delayed
+Indicator variable for which 1 = clerical workers wanted.
 </td>
 <td style="text-align:right;">
 0
@@ -1102,15 +1442,15 @@ aircraft delayed
 Numeric variable
 </td>
 <td style="text-align:left;width: 30em; ">
-[0, 819.66]
+[0, 1]
 </td>
 </tr>
 <tr>
 <td style="text-align:left;font-weight: bold;border-right:1px solid;">
-arr_cancelled
+sales_rep
 </td>
 <td style="text-align:left;width: 30em; ">
-Number of cancelled flights
+Indicator variable for which 1 = sales representative wanted.
 </td>
 <td style="text-align:right;">
 0
@@ -1119,15 +1459,15 @@ Number of cancelled flights
 Numeric variable
 </td>
 <td style="text-align:left;width: 30em; ">
-[0, 224]
+[0, 1]
 </td>
 </tr>
 <tr>
 <td style="text-align:left;font-weight: bold;border-right:1px solid;">
-arr_diverted
+retail_sales
 </td>
 <td style="text-align:left;width: 30em; ">
-Number of flights that were diverted
+Indicator variable for which 1 = retail sales worker wanted.
 </td>
 <td style="text-align:right;">
 0
@@ -1136,15 +1476,15 @@ Number of flights that were diverted
 Numeric variable
 </td>
 <td style="text-align:left;width: 30em; ">
-[0, 42]
+[0, 1]
 </td>
 </tr>
 <tr>
 <td style="text-align:left;font-weight: bold;border-right:1px solid;">
-arr_delay
+req
 </td>
 <td style="text-align:left;width: 30em; ">
-Total time (minutes) of delayed flight.
+Indicator variable for which 1 = ad mentions any requirement for job.
 </td>
 <td style="text-align:right;">
 0
@@ -1153,15 +1493,16 @@ Total time (minutes) of delayed flight.
 Numeric variable
 </td>
 <td style="text-align:left;width: 30em; ">
-[0, 160383]
+[0, 1]
 </td>
 </tr>
 <tr>
 <td style="text-align:left;font-weight: bold;border-right:1px solid;">
-carrier_delay
+exp_req
 </td>
 <td style="text-align:left;width: 30em; ">
-Total time (minutes) of delay due to air carrier
+Indicator variable for which 1 = ad mentions some experience
+requirement.
 </td>
 <td style="text-align:right;">
 0
@@ -1170,15 +1511,16 @@ Total time (minutes) of delay due to air carrier
 Numeric variable
 </td>
 <td style="text-align:left;width: 30em; ">
-[0, 55215]
+[0, 1]
 </td>
 </tr>
 <tr>
 <td style="text-align:left;font-weight: bold;border-right:1px solid;">
-weather_delay
+com_req
 </td>
 <td style="text-align:left;width: 30em; ">
-Total time (minutes) of delay due to inclement weather.
+Indicator variable for which 1 = ad mentions some communication skills
+requirement.
 </td>
 <td style="text-align:right;">
 0
@@ -1187,15 +1529,16 @@ Total time (minutes) of delay due to inclement weather.
 Numeric variable
 </td>
 <td style="text-align:left;width: 30em; ">
-[0, 14219]
+[0, 1]
 </td>
 </tr>
 <tr>
 <td style="text-align:left;font-weight: bold;border-right:1px solid;">
-nas_delay
+educ_req
 </td>
 <td style="text-align:left;width: 30em; ">
-Total time (minutes) of delay due to National Aviation System.
+Indicator variable for which 1 = ad mentions some educational
+requirement.
 </td>
 <td style="text-align:right;">
 0
@@ -1204,15 +1547,16 @@ Total time (minutes) of delay due to National Aviation System.
 Numeric variable
 </td>
 <td style="text-align:left;width: 30em; ">
-[0, 82064]
+[0, 1]
 </td>
 </tr>
 <tr>
 <td style="text-align:left;font-weight: bold;border-right:1px solid;">
-security_delay
+comp_req
 </td>
 <td style="text-align:left;width: 30em; ">
-Total time (minutes) of delay as a result of a security issue .
+Indicator variable for which 1 = ad mentions some computer skill
+requirement.
 </td>
 <td style="text-align:right;">
 0
@@ -1221,16 +1565,16 @@ Total time (minutes) of delay as a result of a security issue .
 Numeric variable
 </td>
 <td style="text-align:left;width: 30em; ">
-[0, 553]
+[0, 1]
 </td>
 </tr>
 <tr>
 <td style="text-align:left;font-weight: bold;border-right:1px solid;">
-late_aircraft_delay
+org_req
 </td>
 <td style="text-align:left;width: 30em; ">
-Total time (minutes) of delay flights as a result of a previous flight
-on the same airplane being late.
+Indicator variable for which 1 = ad mentions some organizational skills
+requirement.
 </td>
 <td style="text-align:right;">
 0
@@ -1239,7 +1583,149 @@ on the same airplane being late.
 Numeric variable
 </td>
 <td style="text-align:left;width: 30em; ">
-[0, 75179]
+[0, 1]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+manuf
+</td>
+<td style="text-align:left;width: 30em; ">
+Indicator variable for which 1 = employer industry is manufacturing.
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[0, 1]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+trans_com
+</td>
+<td style="text-align:left;width: 30em; ">
+Indicator variable for which 1 = employer industry is transport or
+communication.
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[0, 1]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+bank_real
+</td>
+<td style="text-align:left;width: 30em; ">
+Indicator variable for which 1 = employer industry is finance, insurance
+or real estate.
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[0, 1]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+trade
+</td>
+<td style="text-align:left;width: 30em; ">
+Indicator variable for which 1 = employer industry is wholesale or
+retail trade.
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[0, 1]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+bus_service
+</td>
+<td style="text-align:left;width: 30em; ">
+Indicator variable for which 1 = employer industry is business or
+personal services.
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[0, 1]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+oth_service
+</td>
+<td style="text-align:left;width: 30em; ">
+Indicator variable for which 1 = employer industry is health, education
+or social services.
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[0, 1]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+miss_ind
+</td>
+<td style="text-align:left;width: 30em; ">
+Indicator variable for which 1 = employer industry is other or unknown.
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+Numeric variable
+</td>
+<td style="text-align:left;width: 30em; ">
+[0, 1]
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+ownership
+</td>
+<td style="text-align:left;width: 30em; ">
+Ownership status of employer, with levels of ‘non-profit’; ‘private’;
+‘public’
+</td>
+<td style="text-align:right;">
+41
+</td>
+<td style="text-align:left;">
+Categorical
+</td>
+<td style="text-align:left;width: 30em; ">
+Nonprofit, Private, Public
 </td>
 </tr>
 </tbody>

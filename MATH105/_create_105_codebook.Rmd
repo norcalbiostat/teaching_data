@@ -1,6 +1,8 @@
 ---
-output: html_document
-
+output: 
+  html_document: 
+    theme: readable
+    
 params: 
   data_name: 
     value: name
@@ -77,6 +79,7 @@ metadata_out <- metadata %>%
 ```
 
 ### Learn more about where this data came from and what the variables mean at `r label_url`. 
+
 ```{r}
 download_link(
   link = file.name,
@@ -87,6 +90,8 @@ download_link(
   self_contained = FALSE
 )
 ```
+
+<a href = "https://norcalbiostat.github.io/teaching_data/"> <button type="button" class="btn btn-warning">Back to all data</button> </a>
 
 ```{r}
 kbl(metadata_out) %>%
