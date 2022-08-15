@@ -1,0 +1,18 @@
+---
+title: "Teaching Data Sets"
+listing:
+  id: math105
+  contents: "MATH105/*.html"
+  type: table
+  sort-ui: false
+  fields: [filename]
+---
+
+This my page for all my teaching data sets organized by class number. 
+
+
+## Math 105
+::: {#math105}
+:::
+
+## Math 130

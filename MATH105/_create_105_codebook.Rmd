@@ -1,0 +1,86 @@
+---
+output: html_document
+
+params: 
+  data_name: 
+    value: name
+
+title: "Codebook for `r params$data_name`"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE, eval=TRUE)
+options(knitr.kable.NA = '')
+
+library(tidyverse)
+library(rvest)
+library(knitr); library(kableExtra)
+
+#params <- list(data_name = "airline_delay") # for testing
+```
+
+```{r}
+file.name <- paste0(params$data_name, ".csv")
+# file.name <- paste0("MATH105/", params$data_name, ".csv") # for testing
+
+# get data, convert all character to factor
+dta <- read_csv(file.name) %>% 
+  mutate(across(where(is.character), factor))
+
+# get label data from web codebook
+label_url <- paste0("https://www.openintro.org/data/index.php?data=",
+                    params$data_name)
+
+html.to.dta <- read_html(label_url) %>%
+  html_elements("dl") %>%
+  html_text2() %>%
+  str_split(pattern = "\n\n") %>%
+  unlist() %>% data.frame()
+
+# split variables and labels
+odd <- seq_len(nrow(html.to.dta)) %% 2 ==1
+
+# start to create metadata summary file
+metadata <- data.frame(
+  var = html.to.dta[odd, 1], 
+  label = html.to.dta[!odd, 1]) %>% 
+  mutate(percent_missing_obs = round(colSums(is.na(dta))/NROW(dta), 2)*100)
+
+# get levels of factor vars. Assign data type to cat data
+factor.levels <- dta %>% 
+  select(where(is.factor)) %>% 
+  purrr::map_dfr(function(f) {
+    data.frame(Levels = levels(f))
+  }, .id = "var") %>%
+  group_by(var) %>% 
+  summarise_all(paste, collapse = ', ') %>%
+  mutate(data_type = "Categorical")
+
+# get range of numeric vars. Assign data type to numeric data
+numeric.ranges <- dta %>%
+  select(!where(is.factor)) %>% 
+  map_df(.f = ~ broom::tidy(summary(.x)), .id = "variable") %>%
+  mutate(range = paste0("[", minimum, ", ", maximum, "]")) %>% 
+  select(var = variable, range)
+
+# left join factor levels onto metadata, assign data type to numeric data
+metadata_out <- metadata %>% 
+  left_join(factor.levels) %>%
+  left_join(numeric.ranges) %>%
+  mutate(data_type = ifelse(is.na(Levels), "Numeric variable", data_type), 
+         values = ifelse(!is.na(Levels), Levels, range)) %>%
+  select(variable = var, label, 
+         `Percent Missing Observations` = percent_missing_obs,
+         data_type, `Plausible Values` = values)
+
+```
+
+### Learn more about where this data came from and what the variables mean at `r label_url`. 
+
+```{r}
+kbl(metadata_out) %>%
+  kable_paper(full_width=F) %>% 
+  column_spec(1, bold = T, border_right = T) %>%
+  column_spec(2, width = "30em") %>% 
+  column_spec(5, width = "30em") 
+```

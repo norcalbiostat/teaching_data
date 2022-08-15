@@ -1,0 +1,14 @@
+{
+  "hash": "fbea5a21b788f009423ccce7e31046e9",
+  "result": {
+    "markdown": "---\nparams: \n#  class: \"class\"\n  data_name: \"name\"\n#  data_file: \"data.name.csv\"\n---\n\n::: {.cell}\n\n:::\n\n\n# Codebook for name\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
