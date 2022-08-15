@@ -15,6 +15,7 @@ options(knitr.kable.NA = '')
 library(tidyverse)
 library(rvest)
 library(knitr); library(kableExtra)
+library(downloadthis)
 
 #params <- list(data_name = "airline_delay") # for testing
 ```
@@ -76,10 +77,20 @@ metadata_out <- metadata %>%
 ```
 
 ### Learn more about where this data came from and what the variables mean at `r label_url`. 
+```{r}
+download_link(
+  link = file.name,
+  button_label = "Download file",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  self_contained = FALSE
+)
+```
 
 ```{r}
 kbl(metadata_out) %>%
-  kable_paper(full_width=F) %>% 
+  kable_styling(full_width=F) %>% 
   column_spec(1, bold = T, border_right = T) %>%
   column_spec(2, width = "30em") %>% 
   column_spec(5, width = "30em") 
