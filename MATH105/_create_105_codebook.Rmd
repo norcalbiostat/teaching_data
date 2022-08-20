@@ -17,7 +17,7 @@ library(rvest)
 library(knitr); library(kableExtra)
 library(downloadthis)
 
-#params <- list(data_name = "yrbss") # for testing
+#params <- list(data_name = "email") # for testing
 ```
 
 ```{r}
@@ -71,8 +71,8 @@ factor.levels <- dta %>%
   purrr::map_dfr(function(f) {
     data.frame(Levels = levels(f))
   }, .id = "var") %>%
+  filter(Levels !="") %>%
   group_by(var) %>% 
-  filter(Levels !="")%>%
   summarise_all(paste, collapse = ', ') %>%
   mutate(data_type = "Categorical")
 
@@ -87,7 +87,7 @@ numeric.ranges <- dta %>%
 metadata_out <- metadata %>% 
   left_join(factor.levels) %>%
   left_join(numeric.ranges) %>%
-  mutate(data_type = ifelse(is.na(Levels), "Numeric variable", data_type), 
+  mutate(data_type = ifelse(is.na(Levels), "Numeric", data_type), 
          values = ifelse(!is.na(Levels), Levels, range)) %>%
   select(variable = var, label, 
          `Percent Missing Observations` = percent_missing_obs,
