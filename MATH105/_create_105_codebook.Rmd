@@ -17,7 +17,7 @@ library(rvest)
 library(knitr); library(kableExtra)
 library(downloadthis)
 
-#params <- list(data_name = "email") # for testing
+#params <- list(data_name = "ames") # for testing
 ```
 
 ```{r}
@@ -28,6 +28,7 @@ download.path <- paste0("https://github.com/norcalbiostat/teaching_data/tree/mai
 dta <- read.csv(file.name) %>% 
   mutate(across(where(is.character), factor))
 
+colnames(dta) <- gsub("\\.", "_", colnames(dta))
 
 # get metadata from web codebook
 label_url <- paste0("https://www.openintro.org/data/index.php?data=",
@@ -103,7 +104,7 @@ title: "Codebook for `r dta.header`"
 
 `r dta.desc`
 
-Learn more about where this data came from at `r label_url`. Not, not all data sets have additional information. 
+Learn more about where this data came from at `r label_url`. Note, not all data sets have additional information. 
 
 ```{r}
 download_file(
