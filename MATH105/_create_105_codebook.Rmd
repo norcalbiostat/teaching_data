@@ -17,15 +17,15 @@ library(rvest)
 library(knitr); library(kableExtra)
 library(downloadthis)
 
-#params <- list(data_name = "airline_delay") # for testing
+#params <- list(data_name = "yrbss") # for testing
 ```
 
 ```{r}
 file.name <- paste0(params$data_name, ".csv")
 #file.name <- paste0("MATH105/", params$data_name, ".csv") # for testing
-
+download.path <- paste0("https://github.com/norcalbiostat/teaching_data/tree/main/MATH105/", file.name)
 # get data, convert all character to factor
-dta <- read_csv(file.name) %>% 
+dta <- read.csv(file.name) %>% 
   mutate(across(where(is.character), factor))
 
 
@@ -62,7 +62,8 @@ odd <- seq_len(nrow(html.to.dta)) %% 2 ==1
 metadata <- data.frame(
   var = html.to.dta[odd, 1], 
   label = html.to.dta[!odd, 1]) %>% 
-  mutate(percent_missing_obs = round(colSums(is.na(dta))/NROW(dta), 2)*100)
+  mutate(percent_missing_obs = round(colSums(is.na(dta))/NROW(dta), 2)*100, 
+         var = gsub("\\.", "_", var))
 
 # get levels of factor vars. Assign data type to cat data
 factor.levels <- dta %>% 
@@ -71,6 +72,7 @@ factor.levels <- dta %>%
     data.frame(Levels = levels(f))
   }, .id = "var") %>%
   group_by(var) %>% 
+  filter(Levels !="")%>%
   summarise_all(paste, collapse = ', ') %>%
   mutate(data_type = "Categorical")
 
@@ -104,7 +106,8 @@ title: "Codebook for `r dta.header`"
 Learn more about where this data came from at `r label_url`. Not, not all data sets have additional information. 
 
 ```{r}
-download_link(
+download_file(
+  path = download.path, 
   link = file.name,
   button_label = "Download file",
   button_type = "primary",
