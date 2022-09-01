@@ -106,7 +106,8 @@ title: "Codebook for `r dta.header`"
 
 Learn more about where this data came from at `r label_url`. Note, not all data sets have additional information. 
 
-```{r}
+```{r, eval=FALSE}
+# not downloading correctly
 download_file(
   path = download.path, 
   link = file.name,
