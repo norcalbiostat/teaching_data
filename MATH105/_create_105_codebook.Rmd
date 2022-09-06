@@ -15,7 +15,7 @@ options(knitr.kable.NA = '')
 library(tidyverse)
 library(rvest)
 library(knitr); library(kableExtra)
-library(downloadthis)
+#library(downloadthis)
 
 #params <- list(data_name = "ames") # for testing
 ```
